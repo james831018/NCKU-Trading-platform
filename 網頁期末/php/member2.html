@@ -1,0 +1,116 @@
+<html>
+<title>Table</title>
+<body>
+<table border="0">
+	<tr> <td width="200" height="5"></td>  <td></td> <td width="900"></td>  <td width="200">會員登入</td> </tr>
+	<tr> <td colspan="7" height="1"><hr></hr></td> </tr>
+	<tr> <td width="250" height="75" align="center" onclick="member()" onMouseOver="a(this)" onMouseOut="b(this)">個人資料</td> <td rowspan="200" width="1"><hr size="490" width="1"></hr></td> 
+			<td colspan="7" rowspan="200">
+				<div id="member" style="display:none">
+					<form action="http://localhost/mylogin.php" method=post>
+						照片<a><br>
+						<hr>
+						<img id="picture" width="100" height="100" src="img\0.jpg" align="center"></img>
+						<input id="inputfile" type="file" name="upload" value="browse" size="50"><br>
+						<a onclick="preview()">預覽</a>
+						<br><br><br>
+
+						名字<br>
+						<hr>
+						<input id="name" type=text value="林品磊">
+						<br><br><br>
+						
+						系級<br>
+						<hr>
+						<input type=text value="資訊106" >
+						<br><br><br>
+						
+						電話<br>
+						<hr>
+						<input type=text value="林品磊">
+						<br><br><br>
+						
+						FB<br>
+						<hr>
+						<input type=text value="林品磊" >
+						<br><br><br>
+						
+						<input type=submit value="修改">
+					</form>
+				</div>
+			
+			
+				<table border="0" align="center" style="display:none">
+					<tr> <td width="800" height="75" align="center">
+							照片</br>
+							<hr>
+							<img width="100" height="100" src="img\0.jpg"></img>
+							<input type="file" name="upload" value="browse" size="50"><br>
+							<br><br><br>
+						 </td></tr>
+					<tr> <td height="75" align="center">
+							名字
+							
+							<hr>
+							<form>
+								<input type="text" value="林品磊"></input>
+							</form>
+							<br><br><br>
+						 </td></tr>
+					<tr> <td height="75" align="center">
+							電話
+							<hr>
+							<form>
+								<input type="text" value="0920403513"></input>
+							</form>
+							<br><br><br>
+						 </td></tr>
+					<tr> <td height="75" align="center">
+							FaceBook
+							<hr>
+							<form>
+								<input type="text" value="james831018@yahoo.com.tw"></input>
+							</form>
+							<br><br><br>
+						 </td></tr>
+				</table>
+			
+			
+			
+			</td> </tr>
+	<tr> <td width="250" height="75" align="center" onMouseOver="a(this)" onMouseOut="b(this)">我的拍賣</td> </tr>
+	<tr> <td width="250" height="75" align="center" onMouseOver="a(this)" onMouseOut="b(this)">購物車</td></tr>
+	<tr> <td width="250" height="75"></td></tr>
+	<tr> <td width="250" height="75"></td></tr>
+	<tr> <td width="250" height="75"></td></tr>
+	<tr> <td width="250" height="75"></td></tr>
+	<tr> <td width="250" height="75"></td></tr>
+
+</table>
+
+<script language="JavaScript">
+function trytry(){
+	document.getElementById("try").style.display="none";
+	//document.getElementById("hi").style.display="none";
+	//document.getElementById("a").style.display="none";
+
+}
+function member(){
+	document.getElementById("member").style.display="";
+	//document.getElementById("hi").style.display="none";
+	//document.getElementById("a").style.display="none";
+
+}
+function preview(){
+	document.getElementById("picture").src=document.getElementById("inputfile").file;
+	//document.getElementById("hi").style.display="none";
+	//document.getElementById("a").style.display="none";
+
+}
+function a(me){
+	me.style.backgroundColor="ffff00";
+}
+function b(me){
+	me.style.backgroundColor="";
+}
+</script>
